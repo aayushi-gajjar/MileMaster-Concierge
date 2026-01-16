@@ -45,6 +45,17 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
       }
+      #error-display {
+        display: none;
+        padding: 20px;
+        background: #ef4444;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+      }
     </style>
   <script type="importmap">
 {
@@ -63,7 +74,15 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
   <body>
+    <div id="error-display"></div>
     <div id="root"></div>
+    <script>
+      window.onerror = function(message, source, lineno, colno, error) {
+        const display = document.getElementById('error-display');
+        display.style.display = 'block';
+        display.innerText = 'Error: ' + message + ' at ' + source + ':' + lineno;
+      };
+    </script>
     <!-- Changed type to text/babel and added extension to src for static hosting -->
     <script type="text/babel" data-type="module" data-presets="typescript,react" src="./index.tsx"></script>
   </body>
