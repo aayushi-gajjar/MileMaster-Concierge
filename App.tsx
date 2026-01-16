@@ -7,13 +7,13 @@ import {
   User,
   Settings,
   ChevronLeft
-} from './components/Icons';
-import { TabView, UserProfile } from './types';
-import DealsView from './views/DealsView';
-import AirlineView from './views/AirlineView';
-import WalletView from './views/WalletView';
-import AssistantView from './views/AssistantView';
-import OnboardingView from './views/OnboardingView';
+} from './components/Icons.tsx';
+import { TabView, UserProfile } from './types.ts';
+import DealsView from './views/DealsView.tsx';
+import AirlineView from './views/AirlineView.tsx';
+import WalletView from './views/WalletView.tsx';
+import AssistantView from './views/AssistantView.tsx';
+import OnboardingView from './views/OnboardingView.tsx';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabView>('DEALS');

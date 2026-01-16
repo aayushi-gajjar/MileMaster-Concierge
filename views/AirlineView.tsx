@@ -1,7 +1,7 @@
 import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
-import { UserProfile, Airline } from '../types';
-import { Plane, TrendingUp, CheckCircle, ArrowRight, MapPin, ExternalLink } from '../components/Icons';
+import { UserProfile, Airline } from '../types.ts';
+import { Plane, TrendingUp, CheckCircle, ArrowRight, MapPin, ExternalLink } from '../components/Icons.tsx';
 
 interface AirlineViewProps {
   userProfile: UserProfile;
